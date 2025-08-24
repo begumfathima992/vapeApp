@@ -15,7 +15,6 @@ import { AppImages, Colors, Fonts } from '../res';
 
 const initialLayout = { width: Dimensions.get('window').width };
 
-// ✅ Sample data for each category
 const liquidDevices = [
   { id: '1', name: 'Liquid 2000', price: 25.99, image: AppImages.vape1 },
   { id: '2', name: 'Liquid Pro', price: 35.5, image: AppImages.vape2 },
@@ -134,10 +133,11 @@ export default function Home() {
             {...props}
             scrollEnabled
             indicatorStyle={{ backgroundColor: '#00e0ff', height: 3 }}
-            style={{ backgroundColor: 'white', marginTop: 20 }}
+            style={{ backgroundColor: Colors.GREY, marginTop: 20 }}
             activeColor={Colors.APPBLACK}
             inactiveColor="grey"
             labelStyle={{ fontSize: 14, fontFamily: Fonts.medium }}
+            tabStyle={{ width: 'auto', paddingHorizontal: 20 }}
           />
         )}
       />
@@ -147,7 +147,7 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: Colors.GREY },
+  container: { flex: 1, backgroundColor: Colors.GREY, padding: 15 },
   row: {
     justifyContent: 'space-between',
     marginBottom: 15,
